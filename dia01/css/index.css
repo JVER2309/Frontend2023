@@ -1,0 +1,73 @@
+.body {
+    /* background-color: black;
+    border: 0.125rem solid white; */
+    /* margin: 1rem; */
+    /* padding: 3rem; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://res.cloudinary.com/jver2309/image/upload/v1658874234/1543864928307_rh5qhk.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+
+}
+
+
+.header {
+    display: flex;
+}
+
+
+.header__image-container {
+    display: flex;
+    max-width: 256px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+.header__image {
+    width: 100%;
+}
+
+
+.footer {
+    display: flex;
+}
+
+.footer-nav {
+    display: flex;
+}
+
+.footer-nav-container {
+    display: flex;
+}
+
+.footer-nav__link-list {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-nav__link-item {
+
+}
+
+.footer-nav__link {
+    display: flex;
+    width: 1.5rem;
+}
+
+.footer-nav_link-image {
+    width: 100%;
+}
