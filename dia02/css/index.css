@@ -2,12 +2,15 @@
     --primary-theme-color: #20322a;
     --secondary-theme-color: #282c34;
     --text-color: #fff;
-    --shadow-color: #8888;
+    --primary-shadow-color: #8888;
+    --secondary-shadow-color: #21242c88;
+    --shadow-color: #888;
     --button-color: #61dafb;
-    --button-color: #fff;
+    --button-color-active: #fff;
     --button-text-color: #000;
     --padding-section: 2em 0;
     --padding-container: 0 2rem;
+    --max-width-container: 1024px;
     --primary-highlight: #61dafb;
     --secondary-highlight: #ffd700;
     --border-radius: 0.5rem;
@@ -40,9 +43,12 @@
     /* background-color: black; */
     /* min-height: 50vh; */
     display: flex;
-    flex-direction: row;
+    
     align-items: center;
     justify-content: space-between;
+    max-width: var(--max-width-container);
+    padding: var(--padding-container);
+    margin: auto;
     /* display: flex;
     align-items: center;
     justify-content: space-between;
@@ -58,8 +64,8 @@
 }
 
 .header-nav__link-logo-container:hover {
-
-    height: 3.25rem;
+    box-shadow: 0 0 0.25rem 0 var(--primary-highlight);
+    /* height: 3.25rem; */
 
 }
 
@@ -67,9 +73,37 @@
     height: 100%;
 }
 
+.header-nav__menu-icon-label {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: var(--all-transition);
+}
+
+.header-nav__menu-icon-label:hover {
+    text-shadow: 0 0 0.25rem var(--primary-highlight);
+}
+
+.header-nav__menu-icon-checkbox {
+    display: none;
+}
+
+.header-nav__menu-icon-checkbox:checked + .header-nav__menu-link-list {
+    left: 0;
+}
+
+
 .header-nav__menu-link-list {
+    position: fixed;
+    left: 100%;
+    top: 4rem;
+    height: calc(100% - 4rem);
+    width: 100%;
+    background-color: var(--primary-shadow-color);
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -87,7 +121,8 @@
     transition: var(--all-transition);
 }
 
-.header-nav__menu-link:hover {
+.header-nav__menu-link:hover,
+.header-nav__menu-link--active {
     color: var(--primary-highlight);
 }
 
@@ -102,6 +137,7 @@
     transition: var(--all-transition);
 }
 
-.header-nav__menu-link:hover::after {
+.header-nav__menu-link:hover::after,
+.header-nav__menu-link--active::after {
     width: 100%;
 }
