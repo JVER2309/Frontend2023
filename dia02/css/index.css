@@ -141,3 +141,30 @@
 .header-nav__menu-link--active::after {
     width: 100%;
 }
+
+@media (min-width: 854px) {
+    :root {
+        --padding-container: 0 0.75em;
+    }
+
+    .header-nav__menu-icon-label {
+        display: none;
+    }
+
+    .header-nav__menu-link-list {
+        position: static;
+        /* left: 100%;
+        top: 4rem; */
+        /* height: calc(100% - 4rem); */
+        width: auto;
+        background-color: inherit;
+        /* display: flex; */
+        flex-direction: row;
+        /* align-items: center;
+        justify-content: center; */
+        gap: 1.5rem;
+        /* margin: 0;
+        padding: 0; */
+        list-style: none;
+    }
+}
