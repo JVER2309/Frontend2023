@@ -17,6 +17,16 @@
     --all-transition: all 0.25s;
 }
 
+@keyframes tech-jump {
+    0% {
+        margin-top: 0;
+    }
+    
+    100% {
+        margin-top: 1rem;
+    }
+}
+
 .profile {
     display: flex;
     align-items: center;
@@ -42,9 +52,17 @@
     flex-direction: column;
     background-color: var(--secondary-shadow-color);
     border-radius: var(--border-radius);
+    box-shadow: 0  0 0 0.125rem var(--primary-shadow-color),
+    0  0 0 0.125rem var(--primary-shadow-color);
     padding: 1rem;
     gap: 1rem;
     text-align: center;
+    transition: var(--all-transition);
+}
+
+.profile-container__info:hover {
+    box-shadow: 0  0 0 0.125rem var(--primary-highlight),
+    0  0 0 0.125rem var(--primary-highlight);
 }
 
 .profile-container__info-title {
@@ -74,6 +92,7 @@
     color: var(--button-text-color);
     font-weight: 700;
     text-shadow: 0 0 0.125rem var(--primary-highlight);
+    
     padding: 0.5em 1.5em;
     text-decoration: none;
     transition: var(--all-transition);
@@ -83,12 +102,15 @@
     background-color: var(--button-color-active);
 }
 
-.profile-container__info-link, .profile-container__info-link--active {
+/* .profile-container__info-link,  */
+.profile-container__info-link--active {
     background-color: var(--button-color-active);
 }
 
 .profile-container__figure {
-    
+    /* background-color: white; */
+    display: flex;
+    justify-content: center;
 }
 
 .profile-container__figure-image-container {
@@ -96,12 +118,18 @@
     display: flex;
     max-width: 256px;
     margin: 0;
+    /* margin: auto; */
 }
 
 .profile-container__figure-image {
     width: 100%;
     border-radius: 50%;
-    
+    transition: var(--all-transition);
+}
+
+.profile-container__figure-image:hover {
+    box-shadow: 0 0 0.25rem 0 var(--primary-highlight),
+    0 0 0.25rem 0 var(--primary-highlight);
 }
 
 .profile-container__figure-tech-one {
@@ -110,6 +138,8 @@
     top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: tech-jump 1s ease-in-out -1s infinite alternate;
+    pointer-events: none;
 }
 
 .profile-container__figure-tech-two {
@@ -118,6 +148,8 @@
     top: 50%;
     left: 0;
     transform: translate(-50%, -50%);
+    animation: tech-jump 1s ease-in-out -0.75s infinite alternate;
+    pointer-events: none;
 }
 
 .profile-container__figure-tech-three {
@@ -126,6 +158,8 @@
     left: 100%;
     top: 50%;
     transform: translate(-50%, -50%);
+    animation: tech-jump 1s ease-in-out -0.5s infinite alternate;
+    pointer-events: none;
 }
 
 .profile-container__figure-tech-four {
@@ -134,4 +168,6 @@
     left: 50%;
     top: 0;
     transform: translate(-50%, -50%);
+    animation: tech-jump 1s ease-in-out -0.25s infinite alternate;
+    pointer-events: none;
 }
