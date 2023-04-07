@@ -35,6 +35,7 @@
     background-size: cover;
     background-position: center;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 .profile-container {
@@ -170,4 +171,43 @@
     transform: translate(-50%, -50%);
     animation: tech-jump 1s ease-in-out -0.25s infinite alternate;
     pointer-events: none;
+}
+
+@media (min-width: 854px) {
+
+    .profile-container {
+        
+        grid-template-columns: 1fr 1fr;
+        
+    }
+
+    .profile-container__info {
+        padding: 2rem;
+        text-align: start;
+    }
+
+    .profile-container__info-title {
+        font-size: 1.25rem;
+    }
+
+    .profile-container__info-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .profile-container__info-description {
+        display: flex;
+        margin: 0;
+    }
+
+    .profile-container__info-description {
+        display: flex;
+    }
+
+    .profile-container__figure-image-container {
+        position: relative;
+        display: flex;
+        max-width: 360px;
+        margin: 0;
+        /* margin: auto; */
+    }
 }
