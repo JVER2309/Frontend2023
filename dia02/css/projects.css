@@ -1,0 +1,104 @@
+:root {
+    scroll-behavior: smooth;
+    --primary-theme-color: #20322a;
+    --secondary-theme-color: #282c34;
+    --text-color: #fff;
+    --primary-shadow-color: #8888;
+    --secondary-shadow-color: #21242c88;
+    --button-color: #61dafb;
+    --button-color-active: #fff;
+    --button-text-color: #000;
+    --primary-highlight: #61dafb;
+    --secondary-highlight: #ffd700;
+    --padding-section: 4em 0;
+    --padding-container: 0 2rem;
+    --max-width-container: 1024px;
+    --border-radius: 0.5rem;
+    --all-transition: all 0.25s;
+}
+
+.projects {
+    padding: var(--padding-section);
+}
+
+.projects__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: auto;
+    padding: var(--padding-container);
+}
+
+.projects__title {
+    font-size: 2rem;
+    text-shadow: 0 0 0.25rem var(--primary-highlight);
+    margin: 0;
+}
+
+.prjects__pojects-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.projects__projects-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: var(--secondary-theme-color);
+    border: 6px solid white;
+}
+
+.projects__item-image-container {
+    display: flex;
+    margin: 0;
+    width: 100%;
+
+
+}
+
+.projects__item-image {
+    width: 100%;
+}
+
+.projects__item-data {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+    padding: 0 1rem;
+}
+
+.projects__item-data-title {
+    margin: 0;
+}
+
+.projects__item-data-core-technology {
+    margin: 0;
+}
+
+.projects__item-data-technology {
+    margin: 0;
+}
+
+.projects__item-data-about {
+    margin: 0;
+}
+
+.projects__item-buttom-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 1rem 1rem;
+}
+
+.projects__item-buttom {
+    font-weight: 700;
+    background-color: var(--button-color);
+    border: 0.0625rem solid var(--button-color);
+    border-radius: var(--border-radius);
+    padding: 0.5em 1em;
+    color: var(--button-text-color);
+    text-decoration: none;
+}
